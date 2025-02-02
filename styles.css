@@ -1,0 +1,100 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Frankfurter Medium', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.hero .tagline {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #65e8b1;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #000000;
+}
+
+.hero-animation {
+    position: relative;
+    width: 40%;
+    height: 300px;
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #65e8b1;
+    border-radius: 50%;
+    animation: moveCircle 5s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.circle:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    animation-delay: 2s;
+}
+
+@keyframes moveCircle {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, 50px);
+    }
+    50% {
+        transform: translate(-50px, -50px);
+    }
+    75% {
+        transform: translate(-50px, 50px);
+    }
+}
